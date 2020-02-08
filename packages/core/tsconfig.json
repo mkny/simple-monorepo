@@ -1,28 +1,17 @@
 {
+  "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "skipLibCheck": true,
-    "incremental": true,
-    "target": "es5",
-    "module": "ESNext",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "allowJs": true,
-    "jsx": "react",
     "declaration": true,
     "outDir": "./dist",
-    "isolatedModules": true,
-    "strict": true,
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "esModuleInterop": true,
+		"noEmit": false,
     "forceConsistentCasingInFileNames": true
   },
+  "include": [
+    "src"
+  ],
   "exclude": [
     "node_modules",
+    "**/__mocks__/*",
     "**/__tests__/*",
     "**/example/*",
 		"src/**/*.test.tsx",
